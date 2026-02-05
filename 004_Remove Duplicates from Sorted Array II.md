@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Remove Duplicates from Sorted Array II
-permalink: /problems/remove-duplicates-sorted-array-II/
+permalink: /problems/remove-duplicates-from-sorted-array-II/
 order: 4
 ---
 
