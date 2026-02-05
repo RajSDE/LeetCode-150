@@ -1,3 +1,8 @@
+---
+layout: default
+title: Merge Sorted Array
+---
+
 **88. Merge Sorted Array**.
 
 ### 1. Common Mistake: The Naive Approach (Sorting)
