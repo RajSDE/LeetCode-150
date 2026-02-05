@@ -5,8 +5,8 @@ title: LeetCode 150
 
 **Top 150 Interview Problems**
 
-> Interview-oriented DSA problems solved with **clear explanations**,  
-> **optimal approaches**, and **production-quality code**.
+Interview-oriented DSA problems solved with **clear explanations**,  
+**optimal approaches**, and **production-quality code**.
 
 ---
 
