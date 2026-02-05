@@ -14,7 +14,7 @@ Interview Oriented DSA Problem Solved with Detailed Explanation !
 | # | Problem | Link |
 |---|--------|------|
 | 1 | Merge Sorted Array | [Open](/LeetCode-150/problems/merge-sorted-array/) |
-| 2 | Remove Element | [Open](/LeetCode-150/problems/remove-element/.md) |
+| 2 | Remove Element | [Open](/LeetCode-150/problems/remove-element/) |
 | 3 | Remove Duplicates from Sorted Array | [Open](/LeetCode-150/problems/remove-duplicates-sorted-array/) |
 | 4 | Remove Duplicates from Sorted Array II | [Open](/LeetCode-150/problems/remove-duplicates-sorted-array-II/) |
 | 5 | Majority Element | [Open](/LeetCode-150/problems/majority-element/) |
