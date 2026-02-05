@@ -3,7 +3,7 @@ layout: default
 title: LeetCode 150
 ---
 
-# LeetCode 150
+# Top 150 Interview Problems
 
 Interview Oriented DSA Problem Solved with Detailed Explanation !
 
