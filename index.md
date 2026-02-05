@@ -5,7 +5,7 @@ title: LeetCode 150
 
 # Top 150 Interview Problems
 
-Interview Oriented DSA Problem Solved with Detailed Explanation !
+All Problems are Solved with Detailed Explanation !
 
 ---
 
@@ -27,5 +27,4 @@ Interview Oriented DSA Problem Solved with Detailed Explanation !
 ## 🔗 Links
 
 - 🏠 [GitHub Repository](https://github.com/RajSDE/LeetCode-150)
-- 📘 [Main README](README.md)
-- 📑 [Fast Index](INDEX.md)
+- 📘 [Developer](https://www.linkedin.com/in/rajsde/)
