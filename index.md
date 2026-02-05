@@ -16,7 +16,7 @@ Interview-oriented DSA problems solved with **clear explanations**, **optimal ap
 | 1 | Merge Sorted Array | [Open](./problems/merge-sorted-array/) |
 | 2 | Remove Element | [Open](./problems/remove-element/) |
 | 3 | Remove Duplicates from Sorted Array | [Open](./problems/remove-duplicates-from-sorted-array/) |
-| 4 | Remove Duplicates from Sorted Array II | [Open](./problems/remove-duplicates-from-sorted-array-ii/) |
+| 4 | Remove Duplicates from Sorted Array II | [Open](./problems/remove-duplicates-from-sorted-array-II/) |
 | 5 | Majority Element | [Open](./problems/majority-element/) |
 | 6 | Rotate Array | [Open](./problems/rotate-array/) |
 | 7 | Best Time to Buy and Sell Stock | [Open](./problems/best-time-to-buy-and-sell-stock/) |
