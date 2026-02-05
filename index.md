@@ -13,7 +13,7 @@ Interview Oriented DSA Problem Solved with Detailed Explanation !
 
 | # | Problem | Link |
 |---|--------|------|
-| 1 | Merge Sorted Array | [Open](001_Merge%20Sorted%20Array.md) |
+| 1 | Merge Sorted Array | [Open](/LeetCode-150/problems/merge-sorted-array/) |
 | 2 | Remove Element | [Open](002_Remove%20Element.md) |
 | 3 | Remove Duplicates from Sorted Array | [Open](003_Remove%20Duplicates%20from%20Sorted%20Array.md) |
 | 4 | Remove Duplicates from Sorted Array II | [Open](004_Remove%20Duplicates%20from%20Sorted%20Array%20II.md) |
