@@ -12,8 +12,8 @@ title: LeetCode 150
 
 ## 📌 Problems
 
-| # | Problem | |
-|---|--------|---|
+| **No.** | **Problem Statement** | **View** |
+|:------:|----------------------|:--------:|
 | 1 | Merge Sorted Array | [Open](./problems/merge-sorted-array/) |
 | 2 | Remove Element | [Open](./problems/remove-element/) |
 | 3 | Remove Duplicates from Sorted Array | [Open](./problems/remove-duplicates-from-sorted-array/) |
