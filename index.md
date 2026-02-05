@@ -14,12 +14,13 @@ Interview Oriented DSA Problem Solved with Detailed Explanation !
 | # | Problem | Link |
 |---|--------|------|
 | 1 | Merge Sorted Array | [Open](/LeetCode-150/problems/merge-sorted-array/) |
-| 2 | Remove Element | [Open](002_Remove%20Element.md) |
-| 3 | Remove Duplicates from Sorted Array | [Open](003_Remove%20Duplicates%20from%20Sorted%20Array.md) |
-| 4 | Remove Duplicates from Sorted Array II | [Open](004_Remove%20Duplicates%20from%20Sorted%20Array%20II.md) |
-| 5 | Majority Element | [Open](005_Majority%20Element.md) |
-| 6 | Rotate Array | [Open](006_Rotate%20Array.md) |
-| 7 | Best Time to Buy and Sell Stock II | [Open](007_Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md) |
+| 2 | Remove Element | [Open](/LeetCode-150/problems/remove-element/.md) |
+| 3 | Remove Duplicates from Sorted Array | [Open](/LeetCode-150/problems/remove-duplicates-sorted-array/) |
+| 4 | Remove Duplicates from Sorted Array II | [Open](/LeetCode-150/problems/remove-duplicates-sorted-array-II/) |
+| 5 | Majority Element | [Open](/LeetCode-150/problems/majority-element/) |
+| 6 | Rotate Array | [Open](/LeetCode-150/problems/rotate-array/) |
+| 7 | Best Time to Buy and Sell Stock II | [Open](/LeetCode-150/problems/best-time-to-buy-and-sell-stock/) |
+| 8 | Best Time to Buy and Sell Stock II | [Open](/LeetCode-150/problems/best-time-to-buy-and-sell-stock-II/) |
 
 ---
 
