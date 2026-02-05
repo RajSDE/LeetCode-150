@@ -2,7 +2,6 @@
 layout: default
 title: Remove Element
 permalink: /problems/remove-element/
-order: 2
 ---
 
 **27. Remove Element**.

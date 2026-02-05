@@ -2,7 +2,6 @@
 layout: default
 title: Remove Duplicates from Sorted Array
 permalink: /problems/remove-duplicates-sorted-array/
-order: 3
 ---
 
 **26. Remove Duplicates from Sorted Array**.
