@@ -20,7 +20,7 @@ Interview-oriented DSA problems solved with **clear explanations**, **optimal ap
 | 5 | Majority Element | [Open](./problems/majority-element/) |
 | 6 | Rotate Array | [Open](./problems/rotate-array/) |
 | 7 | Best Time to Buy and Sell Stock | [Open](./problems/best-time-to-buy-and-sell-stock/) |
-| 8 | Best Time to Buy and Sell Stock II | [Open](./problems/best-time-to-buy-and-sell-stock-ii/) |
+| 8 | Best Time to Buy and Sell Stock II | [Open](./problems/best-time-to-buy-and-sell-stock-II/) |
 
 ---
 
