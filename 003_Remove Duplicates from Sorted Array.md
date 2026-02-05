@@ -1,3 +1,9 @@
+---
+layout: default
+title: Remove Duplicates from Sorted Array
+permalink: /problems/remove-duplicates-sorted-array/
+---
+
 **26. Remove Duplicates from Sorted Array**.
 
 ### 1. The Question Explained (Simply)

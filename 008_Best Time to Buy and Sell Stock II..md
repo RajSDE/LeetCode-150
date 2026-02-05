@@ -1,3 +1,9 @@
+---
+layout: default
+title: Best Time to Buy and Sell Stock II
+permalink: /problems/best-time-to-buy-and-sell-stock-II/
+---
+
 **122. Best Time to Buy and Sell Stock II**.
 
 ### 1. The Question Explained (Simply)

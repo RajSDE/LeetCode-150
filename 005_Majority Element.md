@@ -1,3 +1,9 @@
+---
+layout: default
+title: Majority Element
+permalink: /problems/majority-element/
+---
+
 **169. Majority Element**.
 
 ### 1. The Question Explained (Simply)

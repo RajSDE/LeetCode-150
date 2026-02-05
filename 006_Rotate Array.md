@@ -1,3 +1,9 @@
+---
+layout: default
+title: Rotate Array
+permalink: /problems/rotate-array/
+---
+
 **189. Rotate Array**.
 
 ### 1. The Question Explained (Simply)

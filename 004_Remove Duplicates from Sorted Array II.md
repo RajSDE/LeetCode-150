@@ -1,82 +1,93 @@
-**26. Remove Duplicates from Sorted Array**.
+---
+layout: default
+title: Remove Duplicates from Sorted Array II
+permalink: /problems/remove-duplicates-sorted-array-II/
+---
+
+**80. Remove Duplicates from Sorted Array II** (Medium).
 
 ### 1. The Question Explained (Simply)
 
-Imagine you have a deck of cards that is already sorted (e.g., 1, 1, 2, 2, 3, 4, 4), but you want to remove the duplicates so you only have unique cards (e.g., 1, 2, 3, 4).
+This is an extension of the previous problem. You still have a sorted deck of cards (e.g., `1, 1, 1, 2, 2, 3`), but the rules have changed.
 
-* **Constraint 1:** You must do this **"in-place."** You cannot buy a new table (create a new array) to lay out the unique cards. You have to stack the unique ones at the front of the original pile.
-* **Constraint 2:** The array is **sorted**. This is a huge hint. It means all duplicate numbers are sitting right next to each other.
-* **Goal:** Return the count of unique numbers (`k`). The first `k` slots of your array must contain these unique numbers in order. We don't care what is left in the slots after `k`.
+* **New Rule:** You are allowed to keep duplicates, but **at most two** of each number.
+* **Example:** If you have `[1, 1, 1, 2, 2, 3]`, you must remove the third `1`. The result should be `[1, 1, 2, 2, 3]`.
+* **Constraint:** Still **in-place** ( space) and **sorted**.
 
 ---
 
-### 2. Common Mistake: The Naive Approach (Using Extra Space)
+### 2. Common Mistake: The "Counter Spaghetti" Code
 
-The most common "lazy" way to solve this is to throw everything into a `HashSet` (which automatically deletes duplicates) and then put them back into the array.
+A common mistake is trying to adapt the previous solution by adding a `count` variable that resets every time the number changes. While this logic *can* work, it often leads to messy, bug-prone code ("Spaghetti Code") where you lose track of which index you are writing to vs. reading from.
 
-**The Mistake Code:**
+**The Messy/Error-Prone Approach:**
 
 ```java
-import java.util.HashSet;
-
 class Solution {
     public int removeDuplicates(int[] nums) {
-        // Mistake: Using O(N) extra space
-        HashSet<Integer> set = new HashSet<>();
-        
-        for (int num : nums) {
-            set.add(num);
-        }
-        
-        // This fails the "O(1) extra memory" requirement of the problem
+        // Mistake: Over-engineering with complex state management
         int i = 0;
-        for (int num : set) { 
-            nums[i++] = num; 
-        }
+        int count = 1; // trying to track count of current number
         
-        // Note: Sets also don't guarantee order (unless LinkedHashSet is used), 
-        // so this might even break the sorted order requirement!
-        return set.size();
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] == nums[i]) {
+                if (count < 2) { // logic nested inside logic
+                    i++;
+                    nums[i] = nums[j];
+                    count++;
+                }
+                // else skip
+            } else {
+                i++;
+                nums[i] = nums[j];
+                count = 1; // reset count
+            }
+        }
+        return i + 1;
     }
 }
 
 ```
 
-**Why this is a mistake:**
+**Why this is a risk:**
 
-* **Space Complexity:** It uses  space. The interviewer explicitly asks for .
-* **Ignoring the "Sorted" Hint:** You aren't utilizing the fact that the array is sorted, which allows you to solve it much faster without a Set.
+* It is hard to read and debug during an interview.
+* You have to carefully manage the `count` reset and the `i` increment separately.
+* There is a much cleaner "Generic Pattern" that solves this in 3 lines.
 
 ---
 
 ### 3. Optimized Solution (Java)
 
-We use the **Two Pointer (Reader/Writer)** pattern again.
+We use the **Two Pointer** pattern again, but with a slight modification to the "Look Back" logic.
 
 ```java
 class Solution {
     public int removeDuplicates(int[] nums) {
-        // Edge case: empty array
-        if (nums.length == 0) return 0;
+        // Any array with 2 or fewer elements is already valid.
+        if (nums.length <= 2) return nums.length;
         
-        // 'insertPos' is our Writer pointer.
-        // We start at index 1 because the first element (index 0) is always unique.
-        int insertPos = 1;
+        // 'insertPos' is our Writer. 
+        // We start at 2 because the first two elements (indices 0 and 1) 
+        // are always allowed to stay, regardless of what they are.
+        int insertPos = 2;
 
-        // 'i' is our Reader pointer. Start scanning from the second element.
-        for (int i = 1; i < nums.length; i++) {
+        // 'i' is our Reader. Start scanning from index 2.
+        for (int i = 2; i < nums.length; i++) {
             
-            // Compare current element with the previous element
-            // If they are different, we found a new unique number.
-            if (nums[i] != nums[i - 1]) {
+            // THE CORE LOGIC:
+            // Instead of checking the immediate neighbor (insertPos - 1),
+            // we check the element TWO spots back (insertPos - 2).
+            if (nums[i] != nums[insertPos - 2]) {
                 
-                // Copy the unique number to the insert position
+                // If nums[i] is NOT the same as the number two spots back,
+                // it means we haven't used this number twice yet. It's valid.
                 nums[insertPos] = nums[i];
-                
-                // Move the insert position forward
                 insertPos++;
             }
-            // If they are the same, we simply skip 'i' and do nothing.
+            // If it IS the same as nums[insertPos - 2], then we already have
+            // two of these numbers (at insertPos-1 and insertPos-2). 
+            // So we skip this one.
         }
 
         return insertPos;
@@ -89,28 +100,29 @@ class Solution {
 
 ### 4. Explanation, Pattern & Approach
 
-**Pattern: Two Pointers (Fast/Slow or Reader/Writer)**
-Just like the previous problem, we have one pointer (`i`) scanning the array fast, and one pointer (`insertPos`) moving slowly, only advancing when we find valid data (a unique number).
+**Pattern: Two Pointers (Look Back K)**
+This is a powerful generalization.
+
+* If you want at most **1** duplicate, you check `nums[i] != nums[insertPos - 1]`.
+* If you want at most **2** duplicates, you check `nums[i] != nums[insertPos - 2]`.
+* If you want at most **K** duplicates, you check `nums[i] != nums[insertPos - K]`.
 
 **Approach Point-to-Point:**
 
-1. **The "Sorted" Advantage:** Since the array is sorted, we don't need to check the whole array to see if a number is a duplicate. We only need to check the **neighbor immediately to the left**.
-2. **Logic:**
-* If `nums[i]` is exactly the same as `nums[i-1]`, it's a duplicate. Ignore it.
-* If `nums[i]` is different from `nums[i-1]`, it is a **New Unique Number**.
+1. **Initialization:** We know `nums[0]` and `nums[1]` are safe. Even if they are `1, 1`, that's allowed. So we start our work at index `2`.
+2. **The Check:** `nums[insertPos - 2]` represents the value that sits at the "start" of our allowed pair.
+* If we are building `[1, 1, ...]` and our next number is `1`.
+* `insertPos` is at index 2. `insertPos - 2` is index 0 (value `1`).
+* Is the new `1` different from the `1` at index 0? No. So we skip it.
 
 
-3. **Execution:**
-* We capture that new unique number and put it at our `insertPos`.
-* We increment `insertPos` to get ready for the *next* unique number.
-
-
-4. **Complexity:**
-* **Time:**  — Single pass through the array.
-* **Space:**  — No extra data structures used.
+3. **Efficiency:**
+* **Time:**  — Single pass.
+* **Space:**  — In-place.
 
 
 
 **Next Problem:**
-The next one is **80. Remove Duplicates from Sorted Array II**.
-This is a "Medium" level problem. It builds on exactly this logic but adds a tricky constraint: you are allowed duplicates, but **at most twice**.
+The next problem is **169. Majority Element**. This is a classic interview question that has a very specific, famous algorithm (Boyer-Moore Voting Algorithm) to solve it efficiently.
+
+Ready to learn the Voting Algorithm?

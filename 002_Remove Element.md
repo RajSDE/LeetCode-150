@@ -1,3 +1,9 @@
+---
+layout: default
+title: Remove Element
+permalink: /problems/remove-element/
+---
+
 **27. Remove Element**.
 
 ### 1. Common Mistakes to Avoid (Naive Code)
