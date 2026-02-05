@@ -1,0 +1,10 @@
+title: "LeetCode 150"
+description: "Interview Oriented DSA Problem Solved with Detailed Explanation"
+theme: jekyll-theme-architect
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+show_downloads: false
