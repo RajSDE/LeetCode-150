@@ -2,6 +2,7 @@
 layout: default
 title: Merge Sorted Array
 permalink: /problems/merge-sorted-array/
+order: 1
 ---
 
 **88. Merge Sorted Array**.

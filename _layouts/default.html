@@ -1,0 +1,27 @@
+{% if page.order %}
+<hr>
+
+<nav style="display:flex; justify-content:space-between; margin-top:20px;">
+
+  {% assign pages = site.pages | where_exp: "p", "p.order" | sort: "order" %}
+
+  {% for p in pages %}
+    {% if p.order == page.order %}
+      {% assign index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if index > 0 %}
+    {% assign prev = pages[index | minus: 1] %}
+    <a href="{{ site.baseurl }}{{ prev.url }}">← {{ prev.title }}</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+
+  {% if index < pages.size | minus: 1 %}
+    {% assign next = pages[index | plus: 1] %}
+    <a href="{{ site.baseurl }}{{ next.url }}">{{ next.title }} →</a>
+  {% endif %}
+
+</nav>
+{% endif %}

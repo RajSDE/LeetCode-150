@@ -2,6 +2,7 @@
 layout: default
 title: Remove Duplicates from Sorted Array II
 permalink: /problems/remove-duplicates-sorted-array-II/
+order: 4
 ---
 
 **80. Remove Duplicates from Sorted Array II** (Medium).
