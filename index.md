@@ -11,16 +11,14 @@ All Problems are Solved with Detailed Explanation !
 
 ## 📌 Problems
 
-| # | Problem | Link |
-|---|--------|------|
-| 1 | Merge Sorted Array | [Open](/LeetCode-150/problems/merge-sorted-array/) |
-| 2 | Remove Element | [Open](/LeetCode-150/problems/remove-element/) |
-| 3 | Remove Duplicates from Sorted Array | [Open](/LeetCode-150/problems/remove-duplicates-sorted-array/) |
-| 4 | Remove Duplicates from Sorted Array II | [Open](/LeetCode-150/problems/remove-duplicates-sorted-array-II/) |
-| 5 | Majority Element | [Open](/LeetCode-150/problems/majority-element/) |
-| 6 | Rotate Array | [Open](/LeetCode-150/problems/rotate-array/) |
-| 7 | Best Time to Buy and Sell Stock II | [Open](/LeetCode-150/problems/best-time-to-buy-and-sell-stock/) |
-| 8 | Best Time to Buy and Sell Stock II | [Open](/LeetCode-150/problems/best-time-to-buy-and-sell-stock-II/) |
+| 1 | Merge Sorted Array | [Open]({{ site.baseurl }}/problems/merge-sorted-array/) |
+| 2 | Remove Element | [Open]({{ site.baseurl }}/problems/remove-element/) |
+| 3 | Remove Duplicates from Sorted Array | [Open]({{ site.baseurl }}/problems/remove-duplicates-sorted-array/) |
+| 4 | Remove Duplicates from Sorted Array II | [Open]({{ site.baseurl }}/problems/remove-duplicates-sorted-array-ii/) |
+| 5 | Majority Element | [Open]({{ site.baseurl }}/problems/majority-element/) |
+| 6 | Rotate Array | [Open]({{ site.baseurl }}/problems/rotate-array/) |
+| 7 | Best Time to Buy and Sell Stock | [Open]({{ site.baseurl }}/problems/best-time-to-buy-and-sell-stock/) |
+| 8 | Best Time to Buy and Sell Stock II | [Open]({{ site.baseurl }}/problems/best-time-to-buy-and-sell-stock-ii/) |
 
 ---
 
